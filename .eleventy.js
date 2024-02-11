@@ -1,4 +1,4 @@
-export default function(eleventyConfig) {
+module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./_src/assets/img");
     eleventyConfig.addPassthroughCopy("./_src/assets/fonts");
     return {
