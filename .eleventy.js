@@ -1,10 +1,16 @@
+const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./_src/assets/img");
-    eleventyConfig.addPassthroughCopy("./_src/assets/fonts");
+
+    eleventyConfig.addPlugin(eleventySass);
+
+    eleventyConfig.addPassthroughCopy("src/assets/img");
+    eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
     return {
         dir: {
             input: "src",
-            output: "dist"
+            output: "dist",
         }
     }
 };
