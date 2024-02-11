@@ -1,0 +1,10 @@
+export default function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("./_src/assets/img");
+    eleventyConfig.addPassthroughCopy("./_src/assets/fonts");
+    return {
+        dir: {
+            input: "src",
+            output: "_site"
+        }
+    }
+};
