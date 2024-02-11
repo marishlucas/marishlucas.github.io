@@ -1,1 +1,59 @@
+#cursor {
+    position: fixed;
+    top: -1rem;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: background-color 0.12s ease-out, height 0.12s, opacity 0.12s,
+        width 0.12s;
+    /* Ensure the custom cursor doesn't interfere with content */
+}
 
+
+@media only screen and (max-width: 768px) {
+    #cursor {
+        display: none;
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3xs;
+    justify-content: space-between;
+    margin-bottom: $space-l;
+}
+
+.hero {
+    letter-spacing: -3px;
+
+    .left {
+        span {
+            margin-left: $space-xl-2xl;
+        }
+
+        font-size: $step-4;
+        text-align: left;
+    }
+
+    .right {
+        font-size: $step-4;
+        text-align: right;
+    }
+
+}
+
+.content {
+    margin-top: $space-l;
+    margin-left: $space-xl-2xl;
+
+    p {
+        max-width: min(700px, 80vw);
+        text-align: justify;
+        white-space: pre-wrap;
+    }
+}

@@ -8,8 +8,11 @@
         <link rel="stylesheet" href="{{ 'assets/css/main.css' | url }}">
     </head>
     <body>
+    <div id="cursor"></div>
+    <div id="cursor-outer"></div>
     {% include "partials/header.njk" %}
     {{ content | safe }}
     {% include "partials/footer.njk" %}
     </body>
+    <script type="module" src="{{ 'assets/js/index.js' | url }}"></script>
 </html>
