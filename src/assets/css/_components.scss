@@ -14,6 +14,20 @@
     pointer-events: none;
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
+
+.word {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding: 1px;
+    display: inline-block;
+}
+
+[data-splitting] {
+    flex-direction: column;
+}
+
+[data-splitting]>.word>span {
+    display: inline-block;
+    transform: translateY(100%);
 }
 
 
@@ -24,19 +38,27 @@
 }
 
 header {
+    opacity: 0;
     display: flex;
     flex-wrap: wrap;
     gap: $space-3xs;
     justify-content: space-between;
+    text-wrap: balance;
     margin-bottom: $space-l;
 }
 
 .hero {
+    opacity: 0;
     letter-spacing: -3px;
 
     .left {
-        span {
+        #text1 {
             margin-left: $space-xl-2xl;
+
+            @media (max-width: 320px) {
+                // Adjust the breakpoint as needed
+                margin-left: 0;
+            }
         }
 
         font-size: $step-4;
@@ -47,10 +69,10 @@ header {
         font-size: $step-4;
         text-align: right;
     }
-
 }
 
 .content {
+    opacity: 0;
     margin-top: $space-l;
     margin-left: $space-xl-2xl;
 
