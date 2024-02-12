@@ -1,5 +1,5 @@
-import { createCursor } from './cursor.js';
+import { Cursor } from './cursor.js';
 
 window.onload = () => {
-  createCursor();
+  new Cursor();
 }

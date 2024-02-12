@@ -1,16 +1,19 @@
 #cursor {
+    --size: 20px;
+    --calculated-size: calc(var(--size) * var(--multiplier));
     position: fixed;
-    top: -1rem;
+    top: 0;
     left: 0;
-    width: 12px;
-    height: 12px;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    height: var(--calculated-size);
+    width: var(--calculated-size);
+    background-color: #000;
     border-radius: 50%;
+    transform: translate3d(calc(100vw * var(--cursor-x) - var(--calculated-size) / 2),
+            calc(100vh * var(--cursor-y) - var(--calculated-size) / 2),
+            0);
     pointer-events: none;
-    transition: background-color 0.12s ease-out, height 0.12s, opacity 0.12s,
-        width 0.12s;
-    /* Ensure the custom cursor doesn't interfere with content */
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
 }
 
 
