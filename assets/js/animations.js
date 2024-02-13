@@ -50,12 +50,19 @@ class Animator {
             header.style.opacity = "1";
         }, 600); // delay can be adjusted accordingly
     }
+    animateFooter() {
+        const footer = document.querySelector('.footer');
+        footer.style.transition = "opacity 1s ease";
+        setTimeout(() => {
+            footer.style.opacity = "1";
+        }, 1800); // delay can be adjusted accordingly
+    }
 
     animateContent() {
-        const content = document.querySelector('.content');
-        content.style.transition = "opacity 1s ease";
+        const about = document.querySelector('.about');
+        about.style.transition = "opacity 1s ease";
         setTimeout(() => {
-            content.style.opacity = "1";
+            about.style.opacity = "1";
         }, 1400); // delay can be adjusted accordingly
     }
 
@@ -63,6 +70,7 @@ class Animator {
         this.animateHeader();
         this.animateSplitWords();
         this.animateContent();
+        this.animateFooter();
     }
 
     init() {
