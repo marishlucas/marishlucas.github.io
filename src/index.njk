@@ -4,30 +4,35 @@ title: Marish Lucas | Web developer, Designer, Photographer
 ---
 
 <main>
-    <section class="hero">
-      <div class="left">
-        <span data-splitting data-cursor>
-          Crafting creative
-        </span><br>
-        <span data-splitting data-cursor id="text1">
-          digital solutions
-        </span>
-      </div>
-      <div class="right">
-        <span data-splitting data-cursor>
-          for individualistic
-        </span><br>
-        <span data-splitting data-cursor>
-          agencies and individuals
-        </span>
-      </div>
+  <section class="hero">
+    <div class="left">
+      <span data-splitting data-cursor>
+        Crafting creative
+      </span><br>
+      <span data-splitting data-cursor id="text1">
+        digital solutions
+      </span>
+    </div>
+    <div class="right">
+      <span data-splitting data-cursor>
+        for freethinking
+      </span><br>
+      <span data-splitting data-cursor>
+        agencies & individuals
+      </span>
+    </div>
+  </section>
+  <section class="about">
+    <div class="about-me">
+      <span>[ about me ]</span>
       <p data-cursor>
         {% markdown %}
         {%- include "about-me.md" -%}
         {% endmarkdown %}
       </p>
+    </div>
+    <div class="about-me__pic">
+      <img draggable="false" src="/assets/img/pic.png" alt="me">
+    </div>
   </section>
-    <section class="content">
-        <span>[ about me ]</span>
-    </section>
 </main>

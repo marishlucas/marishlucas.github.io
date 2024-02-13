@@ -29,7 +29,6 @@ class Cursor {
         document.documentElement.style.setProperty("--multiplier", this.multiplier);
     }
     render() {
-        console.log(this.multiplier)
         //calculate lerped values
         this.cursor.x = lerp(this.cursor.x, this.target.x, this.speed);
         this.cursor.y = lerp(this.cursor.y, this.target.y, this.speed);

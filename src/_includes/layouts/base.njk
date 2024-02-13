@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>{{title}}</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preload" href="/assets/fonts/inter-v13-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="{{ 'assets/css/main.css' | url }}">
-    </head>
-    <body>
-    <div id="cursor"></div>
-    <div id="cursor-outer"></div>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/assets/fonts/inter-v13-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | url }}">
+</head>
+
+<body>
+  <div id="cursor"></div>
+  <div class="content">
     {% include "partials/header.njk" %}
     {{ content | safe }}
-    {% include "partials/footer.njk" %}
-    </body>
-    <script type="module" src="{{ 'assets/js/index.js' | url }}"></script>
+  </div>
+  {% include "partials/footer.njk" %}
+</body>
+<script type="module" src="{{ 'assets/js/index.js' | url }}"></script>
+
 </html>
