@@ -1,7 +1,15 @@
+const markdownIt = require("markdown-it");
+
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 
 module.exports = function(eleventyConfig) {
-    
+    const md = new markdownIt({
+    html: true
+  });
+
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(content);
+  }); 
 
     eleventyConfig.addPlugin(eleventySass);
     eleventyConfig.addPassthroughCopy("CNAME");
