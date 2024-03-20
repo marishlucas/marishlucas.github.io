@@ -1,8 +1,8 @@
-import { Animator } from './animations.js';
-import { Cursor } from './cursor.js';
+document.querySelectorAll(".nav-link").forEach((link) => {
+  console.log(link);
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+    }
+});
 
-window.onload = () => {
-
-  new Cursor();
-  new Animator();
-}
