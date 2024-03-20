@@ -11,11 +11,10 @@
 
 <body>
   <div id="cursor"></div>
-  <div class="content">
     {% include "partials/header.njk" %}
+  <div class="content">
     {{ content | safe }}
   </div>
-  {% include "partials/footer.njk" %}
 </body>
 <script type="module" src="/assets/js/index.js"></script>
 </html>

@@ -2,9 +2,19 @@
 layout: layouts/base.njk
 title: Marish Lucas | Web developer, Designer, Photographer
 eleventyNavigation:
-  key: home
+  key: about
 ---
 
 <main>
-  home
+  <div class="about">
+    <div class="about-text">
+      {% markdown %}
+        {%- include "about-me.md" -%}
+        {% endmarkdown %}
+    </div>
+    <div class="about-img">
+      <div class="about-img__subtitle">I also like coffee</div>
+      <img src="/assets/img/pic.jpg" draggable="false" alt="rack on rack">
+    </div>
+  </div>
 </main>
