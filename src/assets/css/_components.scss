@@ -20,3 +20,23 @@ nav {
     }
   }
 }
+.hero {
+  text-align: center;
+  text-wrap: nowrap;
+
+  h1 {
+    @include fluid-type(320px, 1440px, 32px, 100px);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-family: "mono";
+
+    @media (min-width: 768px) {
+      transform: translateY(-50%);
+    }
+  }
+}
