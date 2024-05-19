@@ -21,6 +21,7 @@ nav {
     }
   }
 }
+
 // Hero section
 .hero {
   text-align: center;
@@ -40,6 +41,23 @@ nav {
     @media (min-width: 768px) {
       transform: translateY(-50%);
     }
+  }
+}
+
+//photo section
+
+.photo {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid black;
+    aspect-ratio: 3/4;
+  }
+  max-width: 40vw;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    max-width: 80vw;
   }
 }
 
