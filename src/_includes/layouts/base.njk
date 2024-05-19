@@ -10,9 +10,8 @@
 </head>
 
 <body>
-  <div id="cursor"></div>
-    {% include "partials/header.njk" %}
   <div class="content">
+    {% include "partials/header.njk" %}
     {{ content | safe }}
   </div>
 </body>
