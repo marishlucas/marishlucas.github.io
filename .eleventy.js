@@ -6,8 +6,14 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function(eleventyConfig) {
   const md = new markdownIt({
     html: true
+  eleventyConfig.addFilter("extractYear", function (value) {
+    const date = new Date(value);
+    return date.getFullYear(); // Returns the year part of the date
   });
 
+  eleventyConfig.addCollection("projects", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("/projects/*.md");
+  });
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
   });
