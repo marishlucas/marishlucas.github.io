@@ -3,9 +3,11 @@ const markdownIt = require("markdown-it");
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   const md = new markdownIt({
-    html: true
+    html: true,
+  });
+
   eleventyConfig.addFilter("extractYear", function (value) {
     const date = new Date(value);
     return date.getFullYear(); // Returns the year part of the date
@@ -14,6 +16,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("projects", function (collectionApi) {
     return collectionApi.getFilteredByGlob("/projects/*.md");
   });
+
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
   });
@@ -28,8 +31,9 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
+      data: "_data",
       input: "src",
       output: "dist",
-    }
-  }
+    },
+  };
 };
