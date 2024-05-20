@@ -1,0 +1,13 @@
+{
+  "overrides": [
+    {
+      "files": "*.njk",
+      "options": {
+        "parser": "html",
+        "htmlWhitespaceSensitivity": "ignore",
+        "printWidth": 80,
+        "proseWrap": "preserve"
+      }
+    }
+  ]
+}
