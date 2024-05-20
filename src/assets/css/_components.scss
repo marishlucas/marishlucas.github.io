@@ -221,11 +221,16 @@ main {
     }
     .about__blank {
       grid-column: span 4;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     .about__roles {
       text-wrap: nowrap;
+      grid-column: span 2; /* Span 2 columns or adjust as needed */
+      min-width: 244px;
+      max-width: 270px;
       @media (max-width: 768px) {
-        grid-column: span 10;
         justify-self: start;
         order: 1;
       }
@@ -233,8 +238,8 @@ main {
         li {
           display: flex;
           justify-content: space-between;
+          font-family: monospace;
         }
-        font-family: monospace;
         display: flex;
         flex-direction: column;
         gap: 4px;
