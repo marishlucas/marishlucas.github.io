@@ -206,3 +206,42 @@ nav {
     }
   }
 }
+
+.contact {
+  padding: 1rem 0;
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  .contact__header {
+    grid-column: span 3;
+    padding-left: 1rem;
+    @media (max-width: 768px) {
+      padding-left: 0;
+      grid-column: span 10;
+    }
+    margin-bottom: 1rem;
+    .contact__title {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+    .contact__subtitle {
+      font-family: monospace;
+    }
+  }
+
+  .contact__socials {
+    grid-column: span 4;
+    ul {
+      display: flex;
+      gap: 1rem;
+      li {
+        text-wrap: nowrap;
+        font-family: monospace;
+      }
+    }
+  }
+}
