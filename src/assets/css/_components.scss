@@ -1,4 +1,10 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 // Navigation
+
 nav {
   display: flex;
   padding: 1rem;
@@ -23,12 +29,13 @@ nav {
 }
 
 // Hero section
+
 .hero {
   text-align: center;
   text-wrap: nowrap;
 
   h1 {
-    @include fluid-type(320px, 1440px, 32px, 100px);
+    @include fluid-type(320px, 1440px, 32px, 89px);
     font-weight: bold;
     line-height: 1.2;
     margin-top: 0;
@@ -65,11 +72,11 @@ nav {
 
 .work {
   .work__header {
+    margin-bottom: 1rem;
     padding-left: 1rem;
     @media (max-width: 768px) {
-      padding-left: 0.5rem;
+      padding-left: 8px;
     }
-    margin-bottom: 1rem;
     .work__title {
       display: inline-block;
       font-weight: bold;
@@ -82,32 +89,60 @@ nav {
   }
 
   .projects-list {
+    @media (max-width: 768px) {
+      padding: 4px 0.5rem;
+    }
+    * {
+      padding: 4px 0;
+    }
     li {
-      * {
-        font-family: monospace;
+      border-bottom: 1px solid black;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      justify-content: space-between;
+    }
+    .project__type {
+      @media (max-width: 768px) {
+        display: none;
       }
-      h4 {
+    }
+    * {
+      font-family: monospace;
+    }
+    h4 {
+      grid-column: span 3;
+      padding-left: 1rem;
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
+    }
+    .project__role {
+      grid-column: span 4;
+      @media (max-width: 768px) {
+        text-align: end;
+        padding-right: 0;
+        grid-column: span 7;
+      }
+    }
+    .project__type {
+      grid-column: span 2;
+      @media (max-width: 468px) {
         grid-column: span 4;
       }
-      .project__type {
-        grid-column: span 2;
-        @media (max-width: 468px) {
-          grid-column: span 4;
-        }
+    }
+    .project__year {
+      justify-self: end;
+      padding-right: 1rem;
+      grid-column: span 1;
+      @media (max-width: 768px) {
+        padding-right: 0;
+        justify-self: start;
+        grid-column: span 1;
       }
-      .project__role {
-        grid-column: span 2;
-        @media (max-width: 768px) {
-          text-align: end;
-          grid-column: span 6;
-        }
-      }
-      .project__year {
-        grid-column: span 2;
-        @media (max-width: 768px) {
-          grid-column: span 4;
-        }
-      }
+    }
+  }
+}
+
 //about section
 
 .about {
