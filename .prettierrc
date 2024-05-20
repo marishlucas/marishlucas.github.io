@@ -1,9 +1,10 @@
 {
+  "plugins": ["prettier-plugin-jinja-template"],
   "overrides": [
     {
       "files": "*.njk",
       "options": {
-        "parser": "html",
+        "parser": "jinja-template",
         "htmlWhitespaceSensitivity": "ignore",
         "printWidth": 80,
         "proseWrap": "preserve"
