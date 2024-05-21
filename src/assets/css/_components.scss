@@ -53,6 +53,7 @@ main {
     }
     .footer__back {
       grid-column: span 3;
+      text-decoration: underline;
       justify-self: end;
       @media (max-width: 768px) {
         grid-column: span 10;
