@@ -277,6 +277,9 @@ main {
 
   .contact__socials {
     grid-column: span 4;
+    @media (max-width: 768px) {
+      grid-column: span 10;
+    }
     ul {
       display: flex;
       gap: 1rem;
