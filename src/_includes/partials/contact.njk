@@ -4,21 +4,11 @@
   </div>
   <div class="contact__socials">
     <ul>
-      <li>
-        <a>
-          <span>[ github ]</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>[ email ]</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>[ linkedin ]</span>
-        </a>
-      </li>
+      {% for contact in contact %}
+        <li>
+          <a target="_blank" href="{{ contact.link }}">{{ contact.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
