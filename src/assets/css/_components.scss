@@ -20,7 +20,7 @@ main {
   ul {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     @media (max-width: 768px) {
       flex-grow: 1;
       justify-content: center;
@@ -282,7 +282,7 @@ main {
     }
     ul {
       display: flex;
-      gap: 2.5rem;
+      gap: 1.5rem;
       li {
         text-wrap: nowrap;
         font-family: monospace;
