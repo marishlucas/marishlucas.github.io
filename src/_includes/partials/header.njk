@@ -2,15 +2,11 @@
   <nav class="navbar">
     <p class="logo">lucas.</p>
     <ul>
-      <li>
-        <a>work</a>
-      </li>
-      <li>
-        <a>about</a>
-      </li>
-      <li>
-        <a>contact</a>
-      </li>
+      {% for contact in contact %}
+        <li>
+          <a target="_blank" href="{{ contact.link }}">{{ contact.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 </header>
