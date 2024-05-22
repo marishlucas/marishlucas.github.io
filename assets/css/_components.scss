@@ -20,7 +20,7 @@ main {
   ul {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     @media (max-width: 768px) {
       flex-grow: 1;
       justify-content: center;
@@ -52,9 +52,14 @@ main {
       }
     }
     .footer__back {
+      button {
+        text-decoration: underline;
+      }
       grid-column: span 3;
+      margin-right: 1rem;
       justify-self: end;
       @media (max-width: 768px) {
+        margin-right: 0rem;
         grid-column: span 10;
         margin-top: 1rem;
       }
@@ -261,8 +266,8 @@ main {
     @media (max-width: 768px) {
       padding-left: 0;
       grid-column: span 10;
+      margin-bottom: 1rem;
     }
-    margin-bottom: 1rem;
     .contact__title {
       display: inline-block;
       font-weight: bold;
@@ -276,9 +281,12 @@ main {
 
   .contact__socials {
     grid-column: span 4;
+    @media (max-width: 768px) {
+      grid-column: span 10;
+    }
     ul {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       li {
         text-wrap: nowrap;
         font-family: monospace;
