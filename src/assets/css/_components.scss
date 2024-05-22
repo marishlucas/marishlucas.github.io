@@ -52,9 +52,11 @@ main {
       }
     }
     .footer__back {
+      button {
+        text-decoration: underline;
+      }
       grid-column: span 3;
       margin-right: 1rem;
-      text-decoration: underline;
       justify-self: end;
       @media (max-width: 768px) {
         margin-right: 0rem;
