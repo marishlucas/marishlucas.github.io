@@ -1,10 +1,12 @@
 <ul class="projects-list">
   {% for project in collections.project | reverse %}
-  <li>
-    <h4>{{ project.data.title }}</h4>
-    <p class="project__role">{{ project.data.roles  }}</p>
-    <p class="project__type">{{ project.data.type }}</p>
-    <p class="project__year">{{ project.data.date | extractYear }}</p>
-  </li>
+    <a target="_blank" href="{{ project.data.href }}">
+      <li>
+        <h4>{{ project.data.title }}</h4>
+        <p class="project__role">{{ project.data.roles }}</p>
+        <p class="project__type">{{ project.data.type }}</p>
+        <p class="project__year">{{ project.data.date | extractYear }}</p>
+      </li>
+    </a>
   {% endfor %}
 </ul>

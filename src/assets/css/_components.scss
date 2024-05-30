@@ -112,6 +112,12 @@ main {
 //Work section
 
 .work {
+  a {
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+  }
   .work__header {
     margin-bottom: 1rem;
     padding-left: 1rem;
