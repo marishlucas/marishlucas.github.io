@@ -91,7 +91,8 @@ main {
   h2 {
     font-size: 1rem;
     font-family: monospace;
-
+    text-wrap: wrap;
+    margin: 0 4px;
     @media (min-width: 768px) {
       transform: translateY(-20%);
     }
